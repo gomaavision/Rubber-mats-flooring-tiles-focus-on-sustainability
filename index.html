@@ -3,112 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gomavision Private Limited | Gym Rubber Mats & Tiles</title>
+<title>Gomavision Private Limited</title>
+
 <style>
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
+body{margin:0;font-family:Arial,Helvetica,sans-serif;}
+header{background:#111;color:white;padding:15px 8%;}
+.logo-box{display:flex;align-items:center;}
+.logo-box img{height:60px;margin-right:15px;}
+nav{background:#222;text-align:center;}
+nav button{
+background:none;
+border:none;
+color:white;
+padding:15px 18px;
+cursor:pointer;
+font-size:15px;
 }
-header{
-    background:#111;
-    color:white;
-    padding:20px;
-    text-align:center;
-}
-header h1{
-    margin:0;
-}
-nav{
-    background:#222;
-    padding:10px;
-    text-align:center;
-}
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-}
-.hero{
-    background:#000;
-    color:white;
-    padding:60px 20px;
-    text-align:center;
-}
-.hero h2{
-    font-size:32px;
-}
-.container{
-    width:90%;
-    margin:auto;
-    padding:30px 0;
-}
-.search-box{
-    text-align:center;
-    margin-bottom:30px;
-}
-.search-box input{
-    width:60%;
-    padding:10px;
-    font-size:16px;
-}
+nav button:hover{background:#444;}
+.section{display:none;padding:40px 8%;}
+.active{display:block;}
+h2{margin-top:0;}
 .products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 .card{
-    background:white;
-    padding:20px;
-    border-radius:6px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-.card h3{
-    margin-top:0;
-}
-.card button{
-    background:black;
-    color:white;
-    padding:8px 12px;
-    border:none;
-    cursor:pointer;
-}
-.details{
-    display:none;
-    margin-top:10px;
-    font-size:14px;
-}
-.inquiry{
-    background:#222;
-    color:white;
-    padding:40px 20px;
-}
-.inquiry input, .inquiry textarea{
-    width:100%;
-    padding:10px;
-    margin-bottom:10px;
-}
-.inquiry button{
-    padding:10px 15px;
-    background:#000;
-    color:white;
-    border:none;
+border:1px solid #ccc;
+padding:20px;
 }
 footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:12px 15px;
-    border-radius:50px;
-    text-decoration:none;
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
 }
 </style>
 </head>
@@ -116,113 +44,179 @@ footer{
 <body>
 
 <header>
-<h1>Gomavision Private Limited</h1>
-<p>Premium Gym Rubber Mats & Tiles Manufacturer</p>
+<div class="logo-box">
+<img src="logo.png" alt="Gomavision Logo">
+<div>
+<h1 style="margin:0;">Gomavision Private Limited</h1>
+<p style="margin:0;font-size:14px;">Gym Rubber Mats & Tiles Manufacturer</p>
+</div>
+</div>
 </header>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Products</a>
-<a href="#">Inquiry</a>
-<a href="#">Contact</a>
+<button onclick="showSection('home')">Home</button>
+<button onclick="showSection('about')">About Company</button>
+<button onclick="showSection('products')">Products</button>
+<button onclick="showSection('process')">Manufacturing</button>
+<button onclick="showSection('sustainability')">Sustainability</button>
+<button onclick="showSection('contact')">Contact</button>
 </nav>
 
-<section class="hero">
-<h2>High-Impact Gym Rubber Flooring Solutions</h2>
-<p>Durable | Anti-Slip | Shock Absorbing | Industrial Grade</p>
-</section>
-
-<div class="container">
-
-<div class="search-box">
-<input type="text" id="searchInput" onkeyup="searchProduct()" placeholder="Search gym mats, tiles, thickness...">
+<!-- HOME -->
+<div id="home" class="section active">
+<h2>Welcome to Gomavision</h2>
+<p>Gomavision Private Limited is a Kerala-based manufacturer of commercial-grade gym rubber mats and tiles. We supply wholesale and bulk flooring solutions designed for durability, anti-slip safety, and high impact resistance.</p>
+<p>We focus on affordable pricing, industrial strength, and responsible production practices.</p>
 </div>
 
-<div class="products" id="productList">
+<!-- ABOUT -->
+<div id="about" class="section">
+<h2>About Our Company</h2>
 
-<div class="card">
-<h3>Heavy Duty Gym Rubber Tile – 20mm</h3>
-<p>High-density impact protection tile for weight training areas.</p>
-<button onclick="toggleDetails(this)">View Details</button>
-<div class="details">
-Thickness: 20mm<br>
-Size: 500x500 mm<br>
-Material: Recycled SBR Rubber<br>
-Usage: Commercial Gyms<br>
-Shock Absorption: High
-</div>
+<p>Gomavision Private Limited operates as a structured rubber flooring manufacturing company serving gyms, fitness centers, and industrial spaces across India.</p>
+
+<h3>Founder & CEO</h3>
+<p><strong>Founder & CEO:</strong> [ENTER CEO NAME HERE]</p>
+
+<h3>Corporate Objective</h3>
+<p>Our objective is to build a sustainable rubber processing enterprise that transforms recycled rubber materials into high-performance flooring systems with long service life.</p>
+
+<h3>Business Model</h3>
+<ul>
+<li>Wholesale supply model</li>
+<li>Bulk manufacturing capability</li>
+<li>Custom thickness production</li>
+<li>Industrial compression molding</li>
+</ul>
 </div>
 
-<div class="card">
-<h3>Interlocking Rubber Mat – 15mm</h3>
-<p>Easy-to-install interlocking flooring for fitness studios.</p>
-<button onclick="toggleDetails(this)">View Details</button>
-<div class="details">
-Thickness: 15mm<br>
-Size: 1m x 1m<br>
-Slip Resistant Surface<br>
-Low Maintenance<br>
-Indoor Use
-</div>
-</div>
+<!-- PRODUCTS -->
+<div id="products" class="section">
+<h2>Gym Rubber Mats & Tiles (Wholesale)</h2>
+
+<div class="products">
 
 <div class="card">
-<h3>Industrial Rubber Flooring Tile – 25mm</h3>
-<p>Extra durability for heavy lifting and equipment zones.</p>
-<button onclick="toggleDetails(this)">View Details</button>
-<div class="details">
-Thickness: 25mm<br>
-High Impact Resistance<br>
-Anti-Vibration<br>
-Commercial & Industrial Use
+<h3>Rubber Mat – 6mm</h3>
+<p>Lightweight flooring for light fitness zones.</p>
+<ul>
+<li>Thickness: 6mm</li>
+<li>Anti-slip surface</li>
+<li>Indoor usage</li>
+<li>Budget-friendly</li>
+</ul>
 </div>
+
+<div class="card">
+<h3>Rubber Mat – 8mm</h3>
+<p>Medium density flooring for general gyms.</p>
+<ul>
+<li>Thickness: 8mm</li>
+<li>Shock absorbing</li>
+<li>Durable compression strength</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Rubber Tile – 10mm</h3>
+<p>Commercial gym application.</p>
+<ul>
+<li>Thickness: 10mm</li>
+<li>Impact resistant</li>
+<li>High durability</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Heavy Duty Tile – 15mm</h3>
+<p>For weight training areas.</p>
+<ul>
+<li>Thickness: 15mm</li>
+<li>High impact protection</li>
+<li>Commercial strength</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Extreme Load Tile – 50mm</h3>
+<p>Heavy equipment & industrial usage.</p>
+<ul>
+<li>Thickness: 50mm</li>
+<li>Maximum shock absorption</li>
+<li>Vibration control</li>
+</ul>
 </div>
 
 </div>
 </div>
 
-<section class="inquiry">
-<div class="container">
-<h2>Send Product Inquiry</h2>
+<!-- MANUFACTURING -->
+<div id="process" class="section">
+<h2>Manufacturing Process</h2>
+
+<p>We utilize controlled rubber compression molding technology. Process includes:</p>
+
+<ul>
+<li>Rubber granule processing</li>
+<li>Density-controlled mixing</li>
+<li>High-pressure compression molding</li>
+<li>Dimensional accuracy checks</li>
+<li>Strength and durability testing</li>
+</ul>
+
+<h3>Pollution Control</h3>
+<p>Our manufacturing process operates with controlled emissions and minimal waste discharge. No hazardous chemical discharge is released during production.</p>
+
+<h3>Quality Control</h3>
+<p>Each batch is tested for compression strength, density consistency, and surface finish before distribution.</p>
+</div>
+
+<!-- SUSTAINABILITY -->
+<div id="sustainability" class="section">
+<h2>Sustainability & Waste Management</h2>
+
+<p>Gomavision integrates recycled rubber materials into its production cycle, reducing landfill waste and extending material life cycles.</p>
+
+<ul>
+<li>Recycling-based raw material sourcing</li>
+<li>Waste reduction through compression reuse</li>
+<li>Long product life reducing replacement waste</li>
+<li>Energy-conscious production</li>
+</ul>
+
+<h3>Affordable Pricing Commitment</h3>
+<p>By optimizing raw material utilization and bulk manufacturing, we maintain competitive wholesale pricing while preserving product durability.</p>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+<h2>Contact Us</h2>
+
+<p><strong>Phone:</strong> +91 7306920124</p>
+<p><strong>Location:</strong> Kerala, India</p>
+<p><strong>Email:</strong> gomavision@gmail.com</p>
+
+<h3>Wholesale Inquiry</h3>
 <form>
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Phone Number" required>
-<input type="email" placeholder="Email Address">
-<textarea rows="4" placeholder="Your Requirement (Thickness, Quantity, Location)"></textarea>
-<button type="submit">Submit Inquiry</button>
+<input type="text" placeholder="Your Name" style="width:100%;padding:10px;margin-bottom:10px;">
+<input type="tel" placeholder="Phone Number" style="width:100%;padding:10px;margin-bottom:10px;">
+<textarea placeholder="Thickness (mm), Quantity, Location" style="width:100%;padding:10px;"></textarea>
+<br><br>
+<button type="submit" style="padding:10px 15px;">Submit</button>
 </form>
-<p>Phone: +91 7306920124</p>
-<p>Location: Kerala, India</p>
 </div>
-</section>
 
 <footer>
-<p>© 2026 Gomavision Private Limited | All Rights Reserved</p>
+© 2026 Gomavision Private Limited | All Rights Reserved
 </footer>
 
-<a class="whatsapp" href="https://wa.me/917306920124" target="_blank">WhatsApp</a>
-
 <script>
-function toggleDetails(button){
-    var details = button.nextElementSibling;
-    if(details.style.display === "block"){
-        details.style.display = "none";
-    } else{
-        details.style.display = "block";
-    }
+function showSection(id){
+var sections=document.getElementsByClassName("section");
+for(var i=0;i<sections.length;i++){
+sections[i].classList.remove("active");
 }
-
-function searchProduct(){
-    var input = document.getElementById("searchInput").value.toLowerCase();
-    var cards = document.getElementsByClassName("card");
-    for(var i=0; i<cards.length; i++){
-        var text = cards[i].innerText.toLowerCase();
-        if(text.includes(input)){
-            cards[i].style.display="block";
-        } else{
-            cards[i].style.display="none";
-        }
-    }
+document.getElementById(id).classList.add("active");
 }
 </script>
 
