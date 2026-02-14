@@ -3,33 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GOMAVISION | Industrial Innovation</title>
+<title>GOMAVISION | Sustainable Rubber Flooring Solutions</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#f4f6f9;
-color:#222;
+background:#f2f2f2;
+color:#111;
 }
 
 header{
-background:#0d1b2a;
+background:#000;
 color:white;
-padding:20px 50px;
+padding:20px 60px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
 
-header h1{
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:60px;
+height:60px;
+}
+
+.logo h1{
 font-size:28px;
 letter-spacing:2px;
 }
@@ -42,32 +54,46 @@ font-weight:500;
 }
 
 nav a:hover{
-color:#00b4d8;
+color:#00c853;
 }
 
 .hero{
-height:90vh;
-background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("met1.jpg");
+background:url("met1.jpg");
 background-size:cover;
 background-position:center;
+height:85vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 color:white;
-padding:0 20px;
+padding:20px;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+}
+
+.hero-content{
+position:relative;
+max-width:900px;
 }
 
 .hero h2{
-font-size:50px;
+font-size:48px;
 margin-bottom:20px;
 }
 
 .hero p{
-max-width:800px;
 font-size:20px;
-line-height:1.6;
+line-height:1.7;
 }
 
 .section{
@@ -76,9 +102,8 @@ padding:80px 60px;
 
 .section h2{
 text-align:center;
-margin-bottom:50px;
-font-size:36px;
-color:#0d1b2a;
+margin-bottom:40px;
+font-size:34px;
 }
 
 .about{
@@ -95,13 +120,13 @@ border-radius:10px;
 
 .about-text{
 width:50%;
-line-height:1.8;
 font-size:18px;
+line-height:1.8;
 }
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 }
 
@@ -110,7 +135,6 @@ background:white;
 padding:20px;
 border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
 }
 
 .card img{
@@ -120,178 +144,209 @@ border-radius:10px;
 
 .card h3{
 margin:15px 0;
-color:#0d1b2a;
 }
 
-.investor-btn{
-position:fixed;
-bottom:30px;
-right:30px;
-background:#0077b6;
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.feature-box{
+background:#000;
 color:white;
-padding:20px;
-border-radius:50%;
-font-size:24px;
-cursor:pointer;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-.modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
-justify-content:center;
-align-items:center;
-}
-
-.modal-content{
-background:white;
-padding:40px;
-width:80%;
-max-width:800px;
+padding:25px;
 border-radius:10px;
 text-align:center;
 }
 
-.modal-content h2{
-margin-bottom:20px;
+.feature-box i{
+font-size:35px;
+margin-bottom:15px;
+color:#00e676;
 }
 
-.close{
-position:absolute;
-top:20px;
-right:30px;
-font-size:30px;
+.button{
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:#00c853;
+color:white;
+text-decoration:none;
+border-radius:5px;
 cursor:pointer;
 }
 
+.form-section{
+background:white;
+padding:60px;
+margin-top:40px;
+border-radius:10px;
+}
+
+input, textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:20px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
 footer{
-background:#0d1b2a;
+background:#000;
 color:white;
 text-align:center;
 padding:30px;
 margin-top:60px;
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+<div class="logo">
+<img src="logo.png" alt="Company Logo">
 <h1>GOMAVISION</h1>
+</div>
+
 <nav>
 <a href="#about">About</a>
 <a href="#products">Products</a>
-<a href="#vision">Vision</a>
+<a href="#services">Services</a>
+<a href="#investors">Investors</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
-<h2>Engineering the Future of Industrial Innovation</h2>
-<p>GOMAVISION is dedicated to delivering high-performance industrial solutions with durability, sustainability, and global standards. Our mission is to redefine the manufacturing industry through innovation, efficiency, and strategic partnerships.</p>
+<div class="hero-content">
+<h2>Sustainable Rubber Recycling & Flooring Solutions</h2>
+<p>We convert used vulcanized rubber into durable rubber mats, tiles and professional flooring systems using SBR and EPDM granules. Affordable. Anti-slip. Heat-resistant. Built for heavy-duty use.</p>
+</div>
 </section>
 
 <section class="section" id="about">
-<h2>About Us</h2>
+<h2>About GOMAVISION</h2>
 <div class="about">
 <img src="met2.jpg">
 <div class="about-text">
-<p><strong>Founder & CEO:</strong> Muhammed Esa Siyam</p>
-<p>GOMAVISION was founded with a powerful mission — to transform industrial manufacturing into a high-efficiency, sustainable, and scalable system. We specialize in advanced material solutions, composite innovation, and industrial-grade production systems designed for long-term durability.</p>
-<p>Our leadership focuses on engineering excellence, market scalability, and investor-driven growth strategies.</p>
+<p><strong>CEO & Founder:</strong> Muhammed Esa Siyam</p>
+
+<p>GOMAVISION focuses on recycling used rubber into high-performance rubber mats and flooring tiles. With the increasing global use of vulcanized rubber, waste control is becoming difficult. We provide a practical recycling solution by converting used rubber into valuable flooring products.</p>
+
+<p>Our mission is to become a globally recognized brand in rubber mat and rubber flooring solutions while maintaining sustainability, durability, and affordability.</p>
 </div>
 </div>
 </section>
 
 <section class="section" id="products">
-<h2>Our Products & Projects</h2>
+<h2>Our Products</h2>
+
 <div class="products">
 
 <div class="card">
 <img src="met3.jpg">
-<h3>Advanced Composite Materials</h3>
-<p>High-strength composite solutions engineered for industrial flooring, durability, and structural integrity.</p>
+<h3>Rubber Mats</h3>
+<p>Manufactured using SBR and EPDM granules. High durability, anti-slip surface, oil resistant, temperature resistant, and suitable for gyms, workshops and heavy-duty areas.</p>
 </div>
 
 <div class="card">
 <img src="met4.jpg">
-<h3>Industrial Manufacturing Systems</h3>
-<p>Scalable production systems designed for optimized performance and global export standards.</p>
+<h3>Rubber Tiles</h3>
+<p>Interlocking or fixed rubber tiles designed for parks, play areas, heavy machinery zones and industrial floors.</p>
 </div>
 
 <div class="card">
 <img src="met1.jpg">
-<h3>Custom Engineering Projects</h3>
-<p>Tailored solutions for commercial and infrastructure-level implementation.</p>
+<h3>Custom Rubber Flooring</h3>
+<p>Full flooring systems for houses, gyms, parks, workshops and heavy metal usage environments.</p>
 </div>
 
 </div>
 </section>
 
-<section class="section" id="vision">
-<h2>Our Vision</h2>
-<p style="max-width:900px;margin:auto;text-align:center;font-size:20px;line-height:1.8;">
-Our vision is to become a globally recognized industrial innovation brand within the next decade. We aim to establish advanced production facilities, expand to international markets, and develop strategic investment partnerships that accelerate sustainable growth and technological excellence.
+<section class="section" id="services">
+<h2>Flooring Installation Services</h2>
+
+<div class="features">
+
+<div class="feature-box">
+<i class="fas fa-hard-hat"></i>
+<h3>Skilled Workers</h3>
+<p>Trained professionals install rubber flooring at your location.</p>
+</div>
+
+<div class="feature-box">
+<i class="fas fa-industry"></i>
+<h3>Heavy Duty Strength</h3>
+<p>Withstands heavy metal equipment, gym loads and industrial pressure.</p>
+</div>
+
+<div class="feature-box">
+<i class="fas fa-temperature-high"></i>
+<h3>Heat & Oil Resistant</h3>
+<p>Performs under high temperature and oil exposure conditions.</p>
+</div>
+
+<div class="feature-box">
+<i class="fas fa-shield-alt"></i>
+<h3>Anti-Slip & Non-Compressible</h3>
+<p>Provides safety and long-lasting structural integrity.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="investors">
+<h2>Investor Opportunities</h2>
+<p style="text-align:center;max-width:900px;margin:auto;font-size:18px;line-height:1.8;">
+The rubber industry is expanding globally. Vulcanized rubber waste is increasing. Our recycling-based business model positions GOMAVISION for long-term growth. 
+
+We are open to strategic investors and partners who want to enter the sustainable rubber flooring industry. Equity partnerships and structured investment models available.
 </p>
+
+<div class="form-section">
+<h3>Investor Inquiry</h3>
+<form>
+<input type="text" placeholder="Full Name">
+<input type="email" placeholder="Email Address">
+<input type="text" placeholder="Investment Interest">
+<textarea placeholder="Message"></textarea>
+<button class="button">Submit Inquiry</button>
+</form>
+</div>
+
 </section>
 
 <section class="section" id="contact">
-<h2>Contact Information</h2>
-<p style="text-align:center;font-size:18px;">
-Company Name: GOMAVISION<br><br>
-CEO & Founder: Muhammed Esa Siyam<br><br>
-Email: gomavision.official@gmail.com<br><br>
-Investor Inquiry: +91-7306920124
+<h2>Buyer Inquiry & Contact</h2>
+
+<div class="form-section">
+<h3>Buyer Inquiry</h3>
+<form>
+<input type="text" placeholder="Full Name">
+<input type="email" placeholder="Email Address">
+<input type="text" placeholder="Project Location">
+<textarea placeholder="Required Flooring Type"></textarea>
+<button class="button">Request Quotation</button>
+</form>
+</div>
+
+<p style="text-align:center;margin-top:30px;font-size:18px;">
+Company Name: GOMAVISION<br>
+CEO & Founder: Muhammed Esa Siyam<br>
+Email: gomavision.official@gmail.com<br>
+Inquiry Number: +91-XXXXXXXXXX
 </p>
+
 </section>
 
-<div class="investor-btn" onclick="openModal()">
-<i class="fas fa-chart-line"></i>
-</div>
-
-<div class="modal" id="investorModal">
-<div class="modal-content">
-<span class="close" onclick="closeModal()">&times;</span>
-<h2>Investor Opportunities</h2>
-<p style="font-size:18px;line-height:1.7;">
-GOMAVISION is actively considering strategic investors and long-term partners who believe in industrial transformation and scalable manufacturing growth. 
-
-We offer structured partnership models, equity opportunities, and scalable profit frameworks based on market expansion strategy.
-
-Our roadmap includes:
-• Production scaling
-• Regional expansion
-• Export development
-• Infrastructure automation
-• Research & development investment
-
-We welcome serious investors to discuss mutually advantageous partnerships.
-
-Contact directly for investor briefing and proposal presentation.
-
-📞 +91-7306920124  
-📧 gomavision.official@gmail.com
-</p>
-</div>
-</div>
-
 <footer>
-<p>© 2026 GOMAVISION | All Rights Reserved</p>
+© 2026 GOMAVISION | Sustainable Rubber Recycling Solutions
 </footer>
-
-<script>
-function openModal(){
-document.getElementById("investorModal").style.display="flex";
-}
-function closeModal(){
-document.getElementById("investorModal").style.display="none";
-}
-</script>
 
 </body>
 </html>
